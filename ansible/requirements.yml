@@ -1,0 +1,4 @@
+---
+- src: geerlingguy.homebrew
+  version: 3.0.0
+

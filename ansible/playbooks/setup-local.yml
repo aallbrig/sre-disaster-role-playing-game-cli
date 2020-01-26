@@ -1,0 +1,16 @@
+---
+- name: Setup Local Machine (OSX)
+  hosts: localhost
+  vars:
+    homebrew_installed_packages:
+      - openapi-generator
+
+  tasks:
+    - name: Installs openapi-cli-generator
+      local_action:
+        module: shell
+        cmd: go get -u github.com/danielgtaylor/openapi-cli-generator
+
+  roles:
+    - geerlingguy.homebrew
+
